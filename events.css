@@ -1,0 +1,124 @@
+.toolbar--row {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.toolbar--row label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--lpu-navy);
+}
+
+.toolbar--row select {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.toolbar--row select:focus {
+  outline: 0;
+  border-color: var(--lpu-orange);
+}
+
+.event-card__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0 14px;
+}
+
+.event-card h3 { margin: 0; font-size: 1.1rem; line-height: 1.3; }
+
+.date-block {
+  flex-shrink: 0;
+  width: 62px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.date-block__month {
+  padding: 3px 0;
+  background: var(--lpu-orange);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.date-block__day {
+  padding: 4px 0 6px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--lpu-navy);
+}
+
+.person-card__meta a { font-weight: 600; color: var(--lpu-navy); }
+.person-card__meta a:hover { color: var(--lpu-orange-dark); text-decoration: underline; }
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 18px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fff4e9;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #b85a05;
+}
+
+.countdown--live { background: #e3f5ea; color: #1e7a45; }
+.countdown--past { background: #eef1f6; color: var(--muted); font-weight: 600; }
+
+.reg-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e7a45;
+}
+
+.link-btn {
+  padding: 4px 6px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+.link-btn:hover { text-decoration: underline; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 200;
+  max-width: calc(100% - 32px);
+  padding: 12px 22px;
+  transform: translateX(-50%);
+  background: var(--lpu-navy);
+  border-left: 4px solid var(--lpu-orange);
+  border-radius: 30px;
+  box-shadow: var(--shadow-md);
+  font-size: 0.92rem;
+  color: #fff;
+}

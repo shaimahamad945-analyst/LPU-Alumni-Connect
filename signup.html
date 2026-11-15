@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | LPU Alumni Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <main class="auth">
+
+    <section class="auth__brand">
+      <!-- COPY the slides, overlay, brand content and dots from login.html -->
+    </section>
+
+    <section class="auth__form">
+      <div class="login-box">
+
+        <h2>Create your account</h2>
+        <p class="login-box__sub">Join the LPU Alumni Connect community.</p>
+
+        <div class="role-tabs">
+          <button type="button" class="role-tab active" data-role="student">
+            <i class="bi bi-mortarboard"></i> Student
+          </button>
+          <button type="button" class="role-tab" data-role="alumni">
+            <i class="bi bi-person-badge"></i> Alumni
+          </button>
+          <span class="role-tabs__slider"></span>
+        </div>
+
+        <div class="role-panel active" id="studentPanel">
+          <form class="login-form" id="studentSignupForm" novalidate>
+
+            <div class="field">
+              <label for="sName">Full Name</label>
+              <div class="field__control">
+                <i class="bi bi-person"></i>
+                <input type="text" id="sName" placeholder="Enter your full name" autocomplete="name">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="sReg">Registration Number</label>
+              <div class="field__control">
+                <i class="bi bi-hash"></i>
+                <input type="text" id="sReg" placeholder="8-digit registration number"
+                       inputmode="numeric" maxlength="8">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="sPass">Password</label>
+              <div class="field__control">
+                <i class="bi bi-lock"></i>
+                <input type="password" id="sPass" placeholder="Create a password" autocomplete="new-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="sConfirm">Confirm Password</label>
+              <div class="field__control">
+                <i class="bi bi-shield-lock"></i>
+                <input type="password" id="sConfirm" placeholder="Re-enter your password" autocomplete="new-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <p class="form-error"></p>
+            <p class="form-success"></p>
+
+            <button type="submit" class="btn-login">
+              Create Student Account <i class="bi bi-arrow-right"></i>
+            </button>
+
+          </form>
+        </div>
+
+        <div class="role-panel" id="alumniPanel">
+          <form class="login-form" id="alumniSignupForm" novalidate>
+
+            <div class="field">
+              <label for="aName">Full Name</label>
+              <div class="field__control">
+                <i class="bi bi-person"></i>
+                <input type="text" id="aName" placeholder="Enter your full name" autocomplete="name">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="aEmail">Email Address</label>
+              <div class="field__control">
+                <i class="bi bi-envelope"></i>
+                <input type="email" id="aEmail" placeholder="Enter your email address" autocomplete="email">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="aYear">Passout Year</label>
+              <div class="field__control">
+                <i class="bi bi-calendar-event"></i>
+                <select id="aYear">
+                  <option value="">Select your passout year</option>
+                </select>
+                <i class="bi bi-chevron-down field__chevron"></i>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="aPass">Password</label>
+              <div class="field__control">
+                <i class="bi bi-lock"></i>
+                <input type="password" id="aPass" placeholder="Create a password" autocomplete="new-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="aConfirm">Confirm Password</label>
+              <div class="field__control">
+                <i class="bi bi-shield-lock"></i>
+                <input type="password" id="aConfirm" placeholder="Re-enter your password" autocomplete="new-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <p class="form-error"></p>
+            <p class="form-success"></p>
+
+            <button type="submit" class="btn-login">
+              Create Alumni Account <i class="bi bi-arrow-right"></i>
+            </button>
+
+          </form>
+        </div>
+
+        <p class="switch-link">Already have an account? <a href="login.html">Sign in</a></p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="common.js"></script>
+  <script src="signup.js"></script>
+</body>
+</html>

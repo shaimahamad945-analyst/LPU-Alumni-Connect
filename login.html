@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | LPU Alumni Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <main class="auth">
+
+    <section class="auth__brand">
+
+      <div class="auth__slides">
+        <div class="auth__slide active" style="background-image: url('lpu1.webp')"></div>
+        <div class="auth__slide" style="background-image: url('lpu.jpg')"></div>
+        <div class="auth__slide" style="background-image: url('lpu3.webp')"></div>
+      </div>
+
+      <div class="auth__overlay"></div>
+
+      <div class="auth__brand-content">
+        <img src="lpu-logo.png" alt="Lovely Professional University logo" class="auth__logo">
+
+        <h1>LPU Alumni Connect</h1>
+
+        <p>Mentorship and career guidance from the Lovely Professional University alumni community.</p>
+
+        <ul class="auth__points">
+          <li><i class="bi bi-people-fill"></i> Connect with LPU alumni</li>
+          <li><i class="bi bi-compass"></i> Get career guidance from mentors</li>
+          <li><i class="bi bi-briefcase"></i> Find internships and referrals</li>
+        </ul>
+      </div>
+
+      <div class="auth__dots">
+        <button class="auth__dot active" aria-label="Show photo 1"></button>
+        <button class="auth__dot" aria-label="Show photo 2"></button>
+        <button class="auth__dot" aria-label="Show photo 3"></button>
+      </div>
+
+    </section>
+
+    <section class="auth__form">
+      <div class="login-box">
+
+        <h2>Welcome back</h2>
+        <p class="login-box__sub">Sign in to continue to your LPU Alumni Connect account.</p>
+
+        <div class="role-tabs">
+          <button type="button" class="role-tab active" data-role="student">
+            <i class="bi bi-mortarboard"></i> Student
+          </button>
+          <button type="button" class="role-tab" data-role="alumni">
+            <i class="bi bi-person-badge"></i> Alumni
+          </button>
+          
+          <button class="role-tab" type="button" data-role="admin">
+          <i class="bi bi-shield-lock"></i>
+          Admin
+          </button>
+
+          <span class="role-tabs__slider"></span>
+        </div>
+
+        <div class="role-panel active" id="studentPanel">
+          <form class="login-form" id="studentForm" novalidate>
+
+            <div class="field">
+              <label for="studentReg">Registration Number</label>
+              <div class="field__control">
+                <i class="bi bi-person"></i>
+                <input type="text" id="studentReg" placeholder="Enter your registration number"
+                       inputmode="numeric" maxlength="8" autocomplete="username">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="studentPass">Password</label>
+              <div class="field__control">
+                <i class="bi bi-lock"></i>
+                <input type="password" id="studentPass" placeholder="Enter your password"
+                       autocomplete="current-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="login-form__row">
+              <label class="check">
+                <input type="checkbox"> Remember me
+              </label>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <p class="form-error"></p>
+
+            <button type="submit" class="btn-login">
+              Sign in as Student <i class="bi bi-arrow-right"></i>
+            </button>
+
+          </form>
+        </div>
+
+        <div class="role-panel" id="alumniPanel">
+          <form class="login-form" id="alumniForm" novalidate>
+
+            <div class="field">
+              <label for="alumniEmail">Email Address</label>
+              <div class="field__control">
+                <i class="bi bi-envelope"></i>
+                <input type="email" id="alumniEmail" placeholder="Enter your email address"
+                       autocomplete="email">
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="alumniYear">Passout Year</label>
+              <div class="field__control">
+                <i class="bi bi-calendar-event"></i>
+                <select id="alumniYear">
+                  <option value="">Select your passout year</option>
+                </select>
+                <i class="bi bi-chevron-down field__chevron"></i>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="field">
+              <label for="alumniPass">Password</label>
+              <div class="field__control">
+                <i class="bi bi-lock"></i>
+                <input type="password" id="alumniPass" placeholder="Enter your password"
+                       autocomplete="current-password">
+                <button type="button" class="field__toggle" aria-label="Show or hide password">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <small class="field__error"></small>
+            </div>
+
+            <div class="login-form__row">
+              <label class="check">
+                <input type="checkbox"> Remember me
+              </label>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <p class="form-error"></p>
+
+            <button type="submit" class="btn-login">
+              Sign in as Alumni <i class="bi bi-arrow-right"></i>
+            </button>
+
+          </form>
+        </div>
+        
+<div class="role-panel" id="adminPanel">
+  <form class="login-form" id="adminLoginForm" novalidate>
+
+    <div class="field">
+      <label for="adminId">Admin ID</label>
+      <div class="field__control">
+        <i class="bi bi-person"></i>
+        <input type="text" id="adminId" placeholder="Enter Admin ID" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="adminPassword">Password</label>
+      <div class="field__control">
+        <i class="bi bi-lock"></i>
+        <input type="password" id="adminPassword" placeholder="Enter password" required>
+        <button type="button" class="field__toggle" aria-label="Show or hide password">
+          <i class="bi bi-eye"></i>
+        </button>
+      </div>
+    </div>
+
+    <p class="form-error" id="adminError"></p>
+
+    <button type="submit" class="btn-login">
+      Login as Admin <i class="bi bi-arrow-right"></i>
+    </button>
+
+  </form>
+</div>
+
+        <p class="switch-link">New to LPU Alumni Connect? <a href="signup.html">Create an account</a></p>
+
+      </div>
+    </section>
+    
+
+
+  </main>
+
+  <script src="common.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

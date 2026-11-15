@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance | LPU Alumni Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="alumni.css">
+  <link rel="stylesheet" href="guidance.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+
+      <a href="index.html" class="brand" aria-label="LPU Alumni Connect home">
+        <img src="lpu-logo.png" alt="Lovely Professional University logo" class="brand__logo">
+        <span class="brand__text">Alumni Connect</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="guidance.html" class="active">Career Guidance</a>
+        <a href="events.html">Events</a>
+        <a href="jobs.html">Jobs</a>
+      </nav>
+
+      <div class="nav-actions" id="navActions">
+        <a href="login.html" class="btn btn--ghost">Login</a>
+        <a href="signup.html" class="btn btn--solid">Sign Up</a>
+        <button type="button" class="menu-toggle" id="menuToggle"
+                aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Career Guidance</span>
+        <h1>Plan your career, step by step</h1>
+        <p>Explore career paths, polish your resume and prepare for interviews.</p>
+      </div>
+    </section>
+
+    <section class="section directory">
+      <div class="container">
+
+        <div class="dir-tabs">
+          <button type="button" class="dir-tab active" data-view="paths" aria-pressed="true">
+            <i class="bi bi-signpost-split"></i> Career Paths
+          </button>
+          <button type="button" class="dir-tab" data-view="resume" aria-pressed="false">
+            <i class="bi bi-file-earmark-text"></i> Resume Checklist
+          </button>
+          <button type="button" class="dir-tab" data-view="interview" aria-pressed="false">
+            <i class="bi bi-chat-square-text"></i> Interview Prep
+          </button>
+        </div>
+
+        <div id="view-paths">
+          <p class="notice">
+            <i class="bi bi-info-circle"></i>
+            General guidance only. For exams, eligibility and dates, always check the official notifications.
+          </p>
+          <div class="path-picker" id="pathPicker" role="group" aria-label="Choose a career path"></div>
+          <div id="pathDetail"></div>
+        </div>
+
+        <div id="view-resume" hidden>
+          <div class="progress-card">
+            <div class="progress-card__info">
+              <strong id="progressText">0 of 14 done</strong>
+              <div class="progress" role="progressbar" aria-label="Resume checklist progress"
+                   aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress__bar" id="progressBar"></div>
+              </div>
+              <p class="progress-card__msg" id="progressMsg"></p>
+            </div>
+            <button type="button" class="btn btn--ghost" id="resetChecks">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset
+            </button>
+          </div>
+          <div class="check-groups" id="checklist"></div>
+        </div>
+
+        <div id="view-interview" hidden>
+          <p class="view-intro">Answer behavioural questions with the STAR method, then open each question below for tips.</p>
+          <div class="star-grid">
+            <div class="star-tile"><b>S</b><strong>Situation</strong><span>Set the scene briefly</span></div>
+            <div class="star-tile"><b>T</b><strong>Task</strong><span>What you needed to achieve</span></div>
+            <div class="star-tile"><b>A</b><strong>Action</strong><span>What you did, step by step</span></div>
+            <div class="star-tile"><b>R</b><strong>Result</strong><span>What changed, with numbers if you can</span></div>
+          </div>
+          <div id="qaList"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">LPU Alumni Connect</div>
+          <p>Bridging the gap between LPU students and alumni through mentorship and career guidance.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="jobs.html">Jobs and Internships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guidance</h4>
+          <ul>
+            <li><a href="guidance.html">Career Paths</a></li>
+            <li><a href="guidance.html#resume">Resume Tips</a></li>
+            <li><a href="guidance.html#interview">Interview Prep</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; <span id="year">2026</span> LPU Alumni Connect. A student project for academic purposes.
+      </div>
+    </div>
+  </footer>
+
+  <script src="alumni-data.js"></script>
+  <script src="guidance-data.js"></script>
+  <script src="home.js"></script>
+  <script src="guidance.js"></script>
+</body>
+</html>

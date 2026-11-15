@@ -1,0 +1,92 @@
+.filters--jobs { grid-template-columns: repeat(3, 1fr) auto; }
+
+.dir-grid--jobs { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+
+.company-logo {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-bottom: 3px solid var(--lpu-orange);
+  border-radius: 12px;
+  background: var(--lpu-navy);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.company-logo--sm { width: 44px; height: 44px; font-size: 1.1rem; }
+
+.job-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0 14px;
+}
+
+.job-card h3 { margin: 0 0 2px; font-size: 1.1rem; line-height: 1.3; }
+
+.job-card .person-card__foot { flex-wrap: wrap; }
+
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.save-btn:hover { border-color: var(--lpu-orange); color: var(--lpu-navy); }
+
+.save-btn.saved {
+  border-color: var(--lpu-orange);
+  background: #fff4e9;
+  color: #b85a05;
+}
+
+.ref-state { display: flex; align-items: center; gap: 8px; }
+
+.dialog {
+  width: min(480px, calc(100% - 32px));
+  padding: 0;
+  border: 0;
+  border-top: 4px solid var(--lpu-orange);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 20px 60px rgba(11, 37, 69, 0.35);
+  color: var(--text);
+}
+
+.dialog::backdrop { background: rgba(11, 37, 69, 0.65); }
+
+.dialog__body { padding: 26px; }
+.dialog__body h2 { margin: 0 0 4px; font-size: 1.3rem; }
+.dialog__job { margin: 0 0 18px; font-size: 0.92rem; color: var(--muted); }
+
+.dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dialog__actions .btn { padding: 10px 20px; }
+
+@media (max-width: 960px) {
+  .filters--jobs { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .filters--jobs { grid-template-columns: 1fr; }
+  .dir-grid--jobs { grid-template-columns: 1fr; }
+  .dialog__body { padding: 20px; }
+}

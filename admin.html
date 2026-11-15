@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | LPU Alumni Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+  <header class="admin-topbar">
+    <a class="admin-brand" href="index.html">
+      <span class="admin-brand__icon"><i class="bi bi-mortarboard-fill"></i></span>
+      <span>LPU Alumni Connect <small>ADMIN CONSOLE</small></span>
+    </a>
+    <div class="admin-topbar__right">
+      <span class="admin-owner"><i class="bi bi-shield-check"></i> Owner</span>
+      <button class="admin-logout" id="logoutBtn" type="button"><i class="bi bi-box-arrow-right"></i> Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-welcome">
+      <div>
+        <p class="admin-eyebrow">ADMINISTRATION</p>
+        <h1>Welcome, <span id="adminName">Administrator</span></h1>
+        <p>Manage your Alumni Connect website and review data stored in this browser.</p>
+      </div>
+      <div class="admin-date" id="todayDate"></div>
+    </section>
+
+    <section class="admin-stats" aria-label="Website data summary">
+      <article class="admin-stat"><span><i class="bi bi-people"></i> Registered users</span><strong id="usersCount">0</strong></article>
+      <article class="admin-stat"><span><i class="bi bi-chat-left-text"></i> Mentorship requests</span><strong id="requestsCount">0</strong></article>
+      <article class="admin-stat"><span><i class="bi bi-calendar-check"></i> Event registrations</span><strong id="eventsCount">0</strong></article>
+      <article class="admin-stat"><span><i class="bi bi-send"></i> Referral requests</span><strong id="referralsCount">0</strong></article>
+    </section>
+
+    <section class="admin-grid">
+      <article class="admin-card admin-card--primary">
+        <div class="admin-card__icon"><i class="bi bi-database"></i></div>
+        <h2>Stored Data Manager</h2>
+        <p>Open the existing data manager to view LocalStorage collections, import or export a backup, and manage stored records.</p>
+        <a class="admin-action" href="data.html">Open data.html <i class="bi bi-arrow-up-right"></i></a>
+      </article>
+
+      <article class="admin-card">
+        <div class="admin-card__icon"><i class="bi bi-person-lines-fill"></i></div>
+        <h2>User accounts</h2>
+        <p>Review the student and alumni accounts saved in this browser.</p>
+        <a class="admin-action" href="data.html#users">View user data <i class="bi bi-arrow-right"></i></a>
+      </article>
+
+      <article class="admin-card">
+        <div class="admin-card__icon"><i class="bi bi-cloud-download"></i></div>
+        <h2>Backup & restore</h2>
+        <p>Use the data manager to export a JSON backup or restore a previous backup.</p>
+        <a class="admin-action" href="data.html">Manage backups <i class="bi bi-arrow-right"></i></a>
+      </article>
+    </section>
+
+    <p class="admin-warning"><i class="bi bi-info-circle"></i> Frontend-only demo: this panel can only see LocalStorage in the current browser. The Admin ID and password are stored in JavaScript and are not secure against inspection or bypass.</p>
+  </main>
+
+  <script src="storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

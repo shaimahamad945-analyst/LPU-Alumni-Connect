@@ -1,0 +1,114 @@
+.data-cards { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+
+.meter-card {
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.meter-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+.meter-card__top strong { color: var(--lpu-navy); }
+.meter-card__top i { color: var(--lpu-orange); }
+.meter-card__top span { color: var(--muted); }
+
+.meter {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e6ebf3;
+}
+
+.meter__bar {
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--lpu-orange);
+  transition: width 0.4s ease;
+}
+
+.data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.data-actions .btn { padding: 10px 18px; font-size: 0.9rem; }
+
+.table-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 6px 0 14px;
+}
+
+.table-head h2 { margin: 0; font-size: 1.25rem; }
+.table-head .btn { padding: 8px 16px; font-size: 0.85rem; }
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+  background: var(--lpu-navy);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.data-table tbody tr:nth-child(even) { background: var(--bg); }
+.data-table tbody tr:hover { background: #fff4e9; }
+.data-table tbody tr:last-child td { border-bottom: 0; }
+
+.raw { margin-top: 28px; }
+
+.raw summary {
+  font-weight: 600;
+  color: var(--lpu-navy);
+  cursor: pointer;
+}
+
+.raw pre {
+  max-height: 360px;
+  overflow: auto;
+  margin: 14px 0 0;
+  padding: 16px;
+  background: var(--lpu-navy);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #e8eef7;
+}

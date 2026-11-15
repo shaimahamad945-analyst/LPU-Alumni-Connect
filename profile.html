@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor Profile | LPU Alumni Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="alumni.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+
+      <a href="index.html" class="brand" aria-label="LPU Alumni Connect home">
+        <img src="lpu-logo.png" alt="Lovely Professional University logo" class="brand__logo">
+        <span class="brand__text">Alumni Connect</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="guidance.html">Career Guidance</a>
+        <a href="events.html">Events</a>
+        <a href="jobs.html">Jobs</a>
+      </nav>
+
+      <div class="nav-actions" id="navActions">
+        <a href="login.html" class="btn btn--ghost">Login</a>
+        <a href="signup.html" class="btn btn--solid">Sign Up</a>
+        <button type="button" class="menu-toggle" id="menuToggle"
+                aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head page-head--slim">
+      <div class="container">
+        <a href="alumni.html" class="back-link">
+          <i class="bi bi-arrow-left"></i> Back to directory
+        </a>
+      </div>
+    </section>
+
+    <section class="section directory">
+      <div class="container">
+
+        <div class="profile-layout" id="profileLayout"></div>
+        <section class="similar" id="similarSection" hidden>
+  <h2><i class="bi bi-people"></i> Similar mentors</h2>
+  <div class="dir-grid" id="similarGrid"></div>
+</section>
+
+          <div id="profileMain"></div>
+
+          <aside class="request-card" aria-label="Request mentorship">
+            <h2>Request mentorship</h2>
+            <p class="request-card__sub">Tell the mentor what you would like help with.</p>
+             <p id="requestSub">Tell the mentor what you would like help with.</p>
+
+            <div id="stateLogin" class="state-box" hidden>
+              <i class="bi bi-lock"></i>
+              <h3>Login to send a request</h3>
+              <p>You need a student account to request mentorship.</p>
+              <a href="login.html" class="btn btn--primary">Login</a>
+              <p class="state-box__alt">New here? <a href="signup.html">Create an account</a></p>
+            </div>
+
+            <div id="stateAlumni" class="state-box" hidden>
+              <i class="bi bi-person-badge"></i>
+              <h3>Students only</h3>
+              <p>Mentorship requests can be sent from a student account.</p>
+            </div>
+
+            <div id="statePending" class="state-box" hidden>
+              <i class="bi bi-hourglass-split"></i>
+              <h3>Request already sent</h3>
+              <p>You already have a pending request with this mentor.</p>
+              <a href="dashboard.html" class="btn btn--solid">Go to dashboard</a>
+            </div>
+
+            <form id="requestForm" novalidate hidden>
+
+              <div class="form-field">
+                <label for="topic">What do you need help with?</label>
+                <select id="topic">
+                  <option value="">Select a topic</option>
+                </select>
+                <small class="field-error"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="slot">Preferred time</label>
+                <select id="slot">
+                  <option value="">Select a time slot</option>
+                </select>
+                <small class="field-error"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Your message</label>
+                <textarea id="message" maxlength="300"
+                          placeholder="Introduce yourself and describe your goal"></textarea>
+                <small class="counter" id="counter">0 / 300</small>
+                <small class="field-error"></small>
+              </div>
+
+              <button type="submit" class="btn btn--primary">
+                <i class="bi bi-send"></i> Send request
+              </button>
+
+              <p class="form-note">
+                <i class="bi bi-info-circle"></i>
+                Demo only: the request is saved in your browser and is not sent to a real person.
+              </p>
+
+            </form>
+
+            <div id="stateDone" class="state-box state-box--success" hidden>
+              <i class="bi bi-check-circle-fill"></i>
+              <h3>Request sent</h3>
+              <p>Your request to <strong id="doneName"></strong> was saved with the status Pending.</p>
+              <a href="dashboard.html" class="btn btn--solid">View my requests</a>
+            </div>
+
+          </aside>
+        </div>
+
+        <div class="empty" id="notFound" hidden>
+          <i class="bi bi-person-x"></i>
+          <h3>Profile not found</h3>
+          <p>This mentor does not exist or the link is incorrect.</p>
+          <a href="alumni.html" class="btn btn--solid">Back to directory</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+ <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">LPU Alumni Connect</div>
+          <p>Bridging the gap between LPU students and alumni through mentorship and career guidance.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="alumni.html">Alumni Directory</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="jobs.html">Jobs and Internships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guidance</h4>
+          <ul>
+            <li><a href="guidance.html">Career Paths</a></li>
+            <li><a href="guidance.html#resume">Resume Tips</a></li>
+<li><a href="guidance.html#interview">Interview Prep</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; <span id="year">2026</span> LPU Alumni Connect. A student project for academic purposes.
+      </div>
+    </div>
+  </footer>
+
+  <script src="alumni-data.js"></script>
+  <script src="home.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
